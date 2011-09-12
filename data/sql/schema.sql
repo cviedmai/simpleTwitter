@@ -1,0 +1,5 @@
+CREATE TABLE simpletwitter_follows (follower_id BIGINT, followed_id BIGINT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(follower_id, followed_id)) ENGINE = INNODB;
+CREATE TABLE simpletwitter_message (id BIGINT AUTO_INCREMENT, user_id BIGINT NOT NULL, message VARCHAR(140) NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX user_id_idx (user_id), PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE simpletwitter_user (id BIGINT AUTO_INCREMENT, name VARCHAR(50) NOT NULL UNIQUE, email VARCHAR(50) NOT NULL UNIQUE, password VARCHAR(50) NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
+ALTER TABLE simpletwitter_follows ADD CONSTRAINT simpletwitter_follows_followed_id_simpletwitter_user_id FOREIGN KEY (followed_id) REFERENCES simpletwitter_user(id) ON DELETE CASCADE;
+ALTER TABLE simpletwitter_message ADD CONSTRAINT simpletwitter_message_user_id_simpletwitter_user_id FOREIGN KEY (user_id) REFERENCES simpletwitter_user(id) ON DELETE CASCADE;

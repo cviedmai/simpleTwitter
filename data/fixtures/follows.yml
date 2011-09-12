@@ -1,0 +1,13 @@
+simpletwitterFollows:
+  uno:
+    follower_id: 1
+    followed_id: 2
+  dos:
+    follower_id: 3
+    followed_id: 1
+  tres:
+    follower_id: 3
+    followed_id: 2
+  cuatro:
+    follower_id: 2
+    followed_id: 3

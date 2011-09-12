@@ -1,0 +1,10 @@
+simpletwitterMessage:
+  hola:
+    user_id: 1
+    message: "Hello World!!!"
+  adios:
+    user_id: 2
+    message: "Good bye world..."
+  greet:
+    user_id: 3
+    message: "Hello cris & magnus!"

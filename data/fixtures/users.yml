@@ -1,0 +1,13 @@
+simpletwitterUser:
+  cris:
+    name: cris
+    email: cristobal@viedma.es
+    password: simple
+  magnus:
+    name: magnus
+    email: mag@nus.com
+    password: nusmag
+  adrian:
+    name: adrian
+    email: adrian@adrian.cm
+    password: dairna
