@@ -20,6 +20,8 @@ class userActions extends sfActions
   public function executeShow(sfWebRequest $request)
   {
     $this->simpletwitter_user = Doctrine_Core::getTable('simpletwitterUser')->find(array($request->getParameter('id')));
+    #All the messages the user should be reading
+    #Check all the messages from all the users this particular user is following
     $this->forward404Unless($this->simpletwitter_user);
   }
 
