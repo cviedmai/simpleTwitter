@@ -6,9 +6,11 @@
     <?php include_title() ?>
     <link rel="shortcut icon" href="/favicon.ico" />
     <?php include_stylesheets() ?>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js" type="text/javascript"></script>
     <?php include_javascripts() ?>
   </head>
   <body>
+    <div id="user"> Login | Register </div>
     <?php echo $sf_content ?>
   </body>
 </html>

@@ -1,1 +1,7 @@
 simpleTwitter: learning to use Symfony
+
+so far:
+- schema.yml with models
+- fixtures for loading test data
+- module scaffold for users
+- gravatar loading from module users

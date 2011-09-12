@@ -1,0 +1,24 @@
+simpletwitterUser:
+  actAs: {Timestampable: ~}
+  columns:
+    name: {type: string(50), notnull: true, unique: true}
+    email: {type: string(50), notnull: true, unique: true}
+    password: {type: string(50), notnull: true}
+
+simpletwitterMessage:
+  actAs: {Timestampable: ~}
+  columns:
+    user_id: {type: integer, notnull: true}
+    message: {type: string(140), notnull: true}
+    created_at: {type: datetime, notnull: true}
+  relations:
+    simpletwitterUser: {onDelete: CASCADE, local: user_id, foreign: id, foreignAlias: simpletwitterUsers}
+
+simpletwitterFollows:
+  actAs: {Timestampable: ~}
+  columns:
+    follower_id: {type: integer, primary: true}
+    followed_id: {type: integer, primary: true}
+  relations:
+    simpletwitterUser: {onDelete: CASCADE, local: follower_id, foreign: id}
+    simpletwitterUser: {onDelete: CASCADE, local: followed_id, foreign: id}
